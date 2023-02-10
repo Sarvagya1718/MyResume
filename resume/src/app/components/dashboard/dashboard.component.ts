@@ -1,0 +1,33 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
+})
+export class DashboardComponent {
+  constructor(private router:Router){}
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['login'])
+  }
+
+
+  ReadMore = true;
+  visible:boolean = false;
+
+  readMe(){
+    this.ReadMore = !this.ReadMore;
+    this.visible = !this.visible;
+  }
+
+
+  home(){
+
+  }
+
+  about(){
+    
+  }
+}
